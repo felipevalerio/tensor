@@ -3,11 +3,11 @@
 
 int main() {
 
-	Eigen::Tensor<int, 3> tensor(2, 3, 4);
-	tensor.setConstant(42);
+	//tensor of rank 3 of sizes: 2, 3, 4
+	Eigen::Tensor<int, 2> tensor({5, 7});
+	tensor.setConstant(rand() % 100); // 42 as a value
 
-	std::cout << "tensor:\n\n"
-			  << tensor << "\n\n";
+	std::cout << "tensor:\n\n" << tensor << "\n\n";
 
 	std::cout << "tamanho do tensor: " << tensor.size() << "\n\n";
 
