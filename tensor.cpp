@@ -3,9 +3,9 @@
 
 int main() {
 
-	//tensor of rank 3 of sizes: 2, 3, 4
-	Eigen::Tensor<int, 2> tensor({5, 7});
-	tensor.setConstant(rand() % 100); // 42 as a value
+
+	Eigen::Tensor<int, 2> tensor(3, 2);
+	tensor.setValues({{1, 1}, {3, 3}, {9, 9}}); 
 
 	std::cout << "tensor:\n\n" << tensor << "\n\n";
 
